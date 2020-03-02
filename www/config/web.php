@@ -51,6 +51,22 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                [
+                    'pattern' => '/api/1.0/algorithm/get-solution',
+                    'route' => '/algorithm-api/get-solution',
+                ],
+                [
+                    'pattern' => '/api/1.0/algorithm/delete-solution',
+                    'route' => '/algorithm-api/delete-solution',
+                ],
+                [
+                    'pattern' => '/api/1.0/log/get-user-log',
+                    'route' => '/algorithm-log-api/get-user-log',
+                ],
+                [
+                    'pattern' => '<controller>/<action>',
+                    'route' => '<controller>/<action>',
+                ],
             ],
         ],
     ],
