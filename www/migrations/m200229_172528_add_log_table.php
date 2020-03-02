@@ -17,16 +17,13 @@ class m200229_172528_add_log_table extends Migration
          * */
         $this->createTable('{{log}}', [
             'id'               => $this->primaryKey(),
-            'user_id'          => $this->integer()->notNull(),
+            'user_id'          => $this->integer(),
             'algorithm_id'     => $this->integer()->notNull(),
             'method'           => $this->char(255)->defaultValue(NULL),
             'request'          => $this->string()->defaultValue(NULL),
             'response'         => $this->string()->defaultValue(NULL),
             'timestamp'        => $this->timestamp()->defaultExpression('CURRENT_TIMESTAMP'),
         ]);
-
-        $this->addForeignKey('fk_log_user_id', '{{log}}',
-            'user_id', '{{user}}', 'id','CASCADE','RESTRICT');
 
         $this->addForeignKey('fk_log_algorithm_id', '{{log}}',
             'algorithm_id', '{{algorithm}}', 'id','CASCADE','RESTRICT');

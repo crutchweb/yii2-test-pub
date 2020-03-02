@@ -17,8 +17,8 @@ class m200229_171410_add_algorithm_table extends Migration
          * */
         $this->createTable('{{algorithm}}', [
             'id'               => $this->primaryKey(),
-            'number'           => $this->integer()->notNull(),
-            'array'            => $this->string()->notNull(),
+            'number'           => $this->integer()->defaultValue(NULL),
+            'array'            => $this->string()->defaultValue(NULL),
             'response'         => $this->string()->defaultValue(NULL),
             'timestamp'        => $this->timestamp()->defaultExpression('CURRENT_TIMESTAMP'),
         ]);
