@@ -15,6 +15,12 @@ $this->title = 'My Yii Application';
     </div>
 
     <div class="body-content">
+        <? if(!Yii::$app->user->isGuest){ ?>
+            <div>
+                <h1 style="text-align: center">Your access-token:</h1>
+                <pre style="text-align: center"><?= Yii::$app->user->identity->auth_key ?></pre>
+            </div>
+        <? } ?>
 
         <div class="row">
             <div class="col-lg-4">
