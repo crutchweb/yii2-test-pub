@@ -25,6 +25,7 @@ class Log extends ActiveRecord
     {
         return [
             ['id', 'safe'],
+            ['algorithm_id', 'required'],
             [['id', 'user_id'], 'integer'],
             [['request', 'response', 'method'], 'trim'],
             [['request', 'response', 'method'], 'string'],
