@@ -15,9 +15,9 @@ The scheme is available here - https://esk.one/p/u8vfLWJFJ
 <br>
 
 <h2>How to use:</h2>
- - First step: Auth from login page /site/login (admin:admin)
- - Second step: Get access-token from homepage
- - Third step: Send requests and receive responses
+- First step: Auth from login page /site/login (admin:admin)
+- Second step: Get access-token from homepage
+- Third step: Send requests and receive responses
 <br>
 
 <h2>Example console:</h2>
